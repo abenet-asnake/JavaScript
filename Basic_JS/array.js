@@ -15,3 +15,8 @@
 
 let number_array =[1,2,3,4,5,6];
 console.log(number_array[0]);
+
+// for of loop for in 
+
+for(const key in number_array) { console.log(key)}
+for(const key of number_array){console.log(key)}
