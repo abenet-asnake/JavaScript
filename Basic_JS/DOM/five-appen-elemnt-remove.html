@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <H1>Question Five DOM</H1>
+        <h2>It Is AppenChild removeChild    createElemnt </h2>
+
+       
+        <div id="container">
+            <p>This is Exsting Paragraph</p>
+<!-- New Paragraph-->
+<!--New Button-->
+        </div>
+        
+        <button id="buttonElement" onclick="createRemove()" >create and remove </button>
+        <script >
+                 function createRemove() {
+                    var newParagraph=document.createElement("p");
+                    newParagraph.textContent = "This Dynamically created Paragraph by JavaScript";
+                  
+                    var container=document.getElementById("container");
+                     container.appendChild(newParagraph);
+                     
+                     var newButton=document.createElement("button");
+                     newButton.textContent = " Remove paragraph";
+                     container.appendChild(newButton);
+               newButton.addEventListener("click", function (){
+                 container.removeChild(newParagraph);
+                 container.removeChild(newButton);
+               })
+                 }
+        </script>
+    </body>
+</html>

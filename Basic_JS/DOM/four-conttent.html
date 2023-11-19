@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <H1>Question Four DOM</H1>
+        <h2>It Is Modify Content </h2>
+
+        <p id="textElement">This is some initial text.</p>
+        <div id="container">
+            <p>This An example of <span>Changing content</span></p>
+        </div>
+        <input type="text" id="inputElement"value="initial Value">
+        <button id="buttonElement" onclick="modifyContent()" >modify Content</button>
+        <script>
+          function modifyContent() {
+            let myText=document.querySelector("#textElement");
+            let container=document.querySelector("#container");
+            let inputValue=document.querySelector("#inputElement");
+
+            myText.textContent = "Text Content Has Been Changed";
+            container.innerHTML="<p> I am using InnerHTML to change <strong>text content</strong</p>";
+           // inputValue.value="New Value";
+             inputValue.setAttribute("value", "New Value");
+          }
+        </script>
+    </body>
+</html>
